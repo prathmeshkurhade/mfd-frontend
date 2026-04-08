@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rn \"queue_calendar_event\\\\|update_client_product_totals\" /c/Users/ADMIN/OneDrive/Desktop/Infinity-Main/Infinity --include=*.sql --include=*.py --include=*.md)",
+      "Bash(xargs grep:*)",
+      "Bash(grep -E \"\\\\.\\(py\\)$\")"
+    ]
+  }
+}

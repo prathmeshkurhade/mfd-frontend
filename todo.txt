@@ -1,0 +1,4 @@
+-- have new task option at end immediatetly, to save time
+-- 80-20 feature
+-- upseling feature
+-- 
