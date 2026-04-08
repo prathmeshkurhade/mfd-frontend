@@ -1,0 +1,76 @@
+# ===== PYTHON =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ===== ENVIRONMENT =====
+.env
+.env.local
+.env.*.local
+*.env
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ===== OS =====
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===== FLUTTER =====
+frontend/.dart_tool/
+frontend/.packages
+frontend/build/
+frontend/*.iml
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.pub-cache/
+frontend/.pub/
+
+# ===== LOGS =====
+*.log
+logs/
+npm-debug.log*
+
+# ===== DATABASE =====
+*.sqlite
+*.sqlite3
+*.db
+
+# ===== SECRETS =====
+*.pem
+*.key
+secrets/
+credentials.json
+token.json
+
+# ===== MISC =====
+*.tmp
+*.temp
+*.bak
+.cache/
+
+
+# ===== TESTING =====
+.pytest_cache/
+
+# ===== PACKAGE CACHE =====
+pip-wheel-metadata/

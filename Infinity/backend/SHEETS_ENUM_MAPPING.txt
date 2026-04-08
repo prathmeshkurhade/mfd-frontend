@@ -1,0 +1,362 @@
+================================================================================
+INFINITY SYNC - GOOGLE SHEETS ENUM AND COLUMN MAPPING
+================================================================================
+
+This file contains the complete mapping of column names and valid enum values
+for the three main sync sheets (Leads, Client Profile, Business Opportunities).
+
+================================================================================
+LEADS SHEET - COLUMN MAPPING AND ENUM VALUES
+================================================================================
+
+Column Name: Prospect Name
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: REQUIRED - Row is synced only if this column has a value
+
+Column Name: Contact No
+  - Type: Phone
+  - Enum Values: Any phone number format
+  - Notes: Optional
+
+Column Name: Email
+  - Type: Email
+  - Enum Values: Any valid email
+  - Notes: Optional
+
+Column Name: Age Group
+  - Type: Enum
+  - Valid Values: 18-24, 25-35, 36-45, 46-55, 56+, below 18, don't know
+  - Database Maps To: 18_to_24, 25_to_35, 36_to_45, 46_to_55, 56_plus, below_18, dont_know
+  - Notes: Case-insensitive, auto-normalized
+
+Column Name: Gender
+  - Type: Enum
+  - Valid Values: Male, Female, Others
+  - Database Maps To: male, female, other
+  - Notes: Case-insensitive
+
+Column Name: Marital Status
+  - Type: Enum
+  - Valid Values: Single, Married, Divorced, Widower, Separated, Don't know
+  - Database Maps To: single, married, divorced, widower, separated, dont_know
+  - Notes: Case-insensitive
+
+Column Name: Occupation
+  - Type: Enum
+  - Valid Values: Service, Business, Retired, Professional, Student, Self Employed, Housemaker, Don't know
+  - Database Maps To: service, business, retired, professional, student, self_employed, housemaker, dont_know
+  - Notes: Case-insensitive
+
+Column Name: Income Group
+  - Type: Enum
+  - Valid Values: 1-2.5, 2.6-8.8, 8.9-12, 12.1-24, 24.1-48, 48.1+, don't know
+  - Database Maps To: l1_to_2_5, l2_6_to_8_8, l8_9_to_12, l12_1_to_24, l24_1_to_48, l48_1_plus, dont_know
+  - Notes: Case-insensitive
+
+Column Name: Dependants
+  - Type: Number
+  - Enum Values: Any number
+  - Notes: Optional
+
+Column Name: Area
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Source of Data
+  - Type: Enum
+  - Valid Values: natural market, referral, social networking, business group, marketing activity, iap, cold call, social media
+  - Database Maps To: natural_market, referral, social_networking, business_group, marketing_activity, iap, cold_call, social_media
+  - Notes: Case-insensitive, defaults to 'natural_market' if empty
+
+Column Name: Source Description
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Sourced By
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Status
+  - Type: Enum
+  - Valid Values: follow up, meeting scheduled, cancelled, converted
+  - Database Maps To: follow_up, meeting_scheduled, cancelled, converted
+  - Notes: Case-insensitive, defaults to 'follow_up' if empty
+
+Column Name: Remarks / Notes
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Date
+  - Type: Date
+  - Enum Values: DD/MM/YYYY format
+  - Notes: Optional, parsed to YYYY-MM-DD
+
+Column Name: Turn Around Time (TAT)
+  - Type: Number
+  - Enum Values: Any number
+  - Notes: Optional
+
+
+================================================================================
+CLIENT PROFILE SHEET - COLUMN MAPPING AND ENUM VALUES
+================================================================================
+
+Column Name: Client Name
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: REQUIRED - Row is synced only if this column has a value
+
+Column Name: Contact no.
+  - Type: Phone
+  - Enum Values: Any phone number format
+  - Notes: Optional
+
+Column Name: Email ID
+  - Type: Email
+  - Enum Values: Any valid email
+  - Notes: Optional
+
+Column Name: Address
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Area
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Birthdate
+  - Type: Date
+  - Enum Values: DD/MM/YYYY format
+  - Notes: Optional
+
+Column Name: Gender
+  - Type: Enum
+  - Valid Values: Male, Female, Others
+  - Database Maps To: male, female, other
+  - Notes: Case-insensitive
+
+Column Name: Marital Status
+  - Type: Enum
+  - Valid Values: Single, Married, Divorced, Widower, Separated, Don't know
+  - Database Maps To: single, married, divorced, widower, separated, dont_know
+  - Notes: Case-insensitive
+
+Column Name: Occupation
+  - Type: Enum
+  - Valid Values: Service, Business, Retired, Professional, Student, Self Employed, Housemaker, Don't know
+  - Database Maps To: service, business, retired, professional, student, self_employed, housemaker, dont_know
+  - Notes: Case-insensitive
+
+Column Name: Income Group
+  - Type: Enum
+  - Valid Values: 1-2.5, 2.6-8.8, 8.9-12, 12.1-24, 24.1-48, 48.1+, don't know
+  - Database Maps To: l1_to_2_5, l2_6_to_8_8, l8_9_to_12, l12_1_to_24, l24_1_to_48, l48_1_plus, dont_know
+  - Notes: Case-insensitive
+
+Column Name: Dependants
+  - Type: Number
+  - Enum Values: Any number
+  - Notes: Optional
+
+Column Name: Client Risk Profile
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Source
+  - Type: Enum
+  - Valid Values: natural market, referral, social networking, business group, marketing activity, iap, cold call, social media
+  - Database Maps To: natural_market, referral, social_networking, business_group, marketing_activity, iap, cold_call, social_media
+  - Notes: Case-insensitive
+
+Column Name: Source Description
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Sourced By
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Total AUM
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: SIP
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: Term Insurance
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: Health Insurance
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: PA Insurance
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: SWP
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: Corpus
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: PMS
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: AIF
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: LAS
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: LI Premium
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: ULIPs
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: Optional
+
+Column Name: Notes
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+
+================================================================================
+BUSINESS OPPORTUNITIES SHEET - COLUMN MAPPING AND ENUM VALUES
+================================================================================
+
+Column Name: Sr No.
+  - Type: Number
+  - Enum Values: Any number
+  - Notes: Optional (auto-generated row number)
+
+Column Name: Client Name/Lead
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional (for reference only)
+
+Column Name: Expected Amount
+  - Type: Decimal
+  - Enum Values: Any decimal number
+  - Notes: REQUIRED - Row is synced only if this column has a value
+
+Column Name: Opportunity Stage
+  - Type: Enum
+  - Valid Values: identified, inbound, proposed
+  - Database Maps To: identified, inbound, proposed (no mapping needed, use exact values)
+  - Notes: REQUIRED, case-insensitive
+
+Column Name: Opportunity Type
+  - Type: Enum
+  - Valid Values: sip, lumpsum, swp, ncd, fd, life_insurance, health_insurance, las
+  - Database Maps To: sip, lumpsum, swp, ncd, fd, life_insurance, health_insurance, las (use exact values)
+  - Notes: REQUIRED, case-insensitive
+
+Column Name: Opportunity Identified From
+  - Type: Enum
+  - Valid Values: goal_planning, portfolio_rebalancing, client_servicing, financial_activities
+  - Database Maps To: goal_planning, portfolio_rebalancing, client_servicing, financial_activities (use exact values)
+  - Notes: REQUIRED, case-insensitive
+
+Column Name: Additional Info
+  - Type: Text
+  - Enum Values: Any text
+  - Notes: Optional
+
+Column Name: Due Date
+  - Type: Date
+  - Enum Values: DD/MM/YYYY format
+  - Notes: Optional
+
+Column Name: Time
+  - Type: Time
+  - Enum Values: HH:MM format
+  - Notes: Optional
+
+Column Name: TAT
+  - Type: Number
+  - Enum Values: Any number
+  - Notes: Optional
+
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+1. COLUMN NAMES MUST MATCH EXACTLY
+   - Column names are case-sensitive
+   - Extra spaces will cause column lookup to fail
+   - Use the exact names provided in this document
+
+2. ENUM VALUES ARE CASE-INSENSITIVE
+   - "Male", "male", "MALE" all map to: male
+   - "don't know", "Don't know", "DON'T KNOW" all map to: dont_know
+   - Spaces are auto-normalized
+
+3. ROW FILTERING RULES
+   - Leads: Row synced only if "Prospect Name" has a value
+   - Clients: Row synced only if "Client Name" has a value
+   - Business Opportunities: Row synced only if "Expected Amount" has a value
+
+4. AUTOMATIC DELETION
+   - When you sync a sheet, ALL previous rows for that sheet are deleted and replaced
+   - This ensures data consistency but means partial syncs will remove old data
+
+5. SYNC BEHAVIOR
+   - Manual Sync: Edit a cell → 3 second debounce → webhook syncs only that sheet
+   - Full Sync: Menu button syncs all sheets with data
+   - Auto-Sync: Install trigger → automatic sync on every cell edit
+
+6. WEBHOOK SECRET
+   - All sheets use the same webhook endpoint
+   - Secret: your-webhook-secret-bffd0b2d86670879037f23b1e1776793d9bea9f22cbe48f32f675095078cbfb4
+   - (This should not be modified by users)
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Issue: Data not syncing
+Solution: Check that column names match exactly, enum values are from the list above
+
+Issue: Only some rows syncing
+Solution: Check if required column (name for Leads/Clients, amount for BO) is empty
+
+Issue: Enum value errors in logs
+Solution: Use values from the "Valid Values" list, ensure spelling matches
+
+Issue: Column not recognized
+Solution: Verify column header spelling matches exactly (case-sensitive)
+
+================================================================================
