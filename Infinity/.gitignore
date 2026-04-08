@@ -74,3 +74,6 @@ token.json
 
 # ===== PACKAGE CACHE =====
 pip-wheel-metadata/
+
+# ===== NODE =====
+node_modules/
